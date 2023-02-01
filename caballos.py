@@ -87,10 +87,10 @@ lista_original = [1,2,3,4,6,7,8,9,0]
 def suma_enesima(n, lista):
     i = 0
     lista_de_paso_2 = lista
-    while i < n:
+    while i < n-1:
         i += 1
         lista_de_paso = morfosear_lista(lista_de_paso_2)
         lista_de_paso_2 = lista_de_paso
     return suma_rara(lista_de_paso_2)
 
-print(suma_enesima(1,lista_original))
+print(suma_enesima(21,lista_original))
