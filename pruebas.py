@@ -1,5 +1,8 @@
 import numpy as np
 
+A = [[0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0], [0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+A = np.array(A)
+
 def multiplicar_matrices(A,B):
     n, m, p = A.shape[0], A.shape[1], B.shape[1]
     C = np.array([[0]*p for i in range(n)])
@@ -33,34 +36,31 @@ def metodo_strassen(A,B):
         C = np.vstack((np.hstack((c11,c12)), np.hstack((c21,c22))))
         return C
 
-A = [[0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0], [0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
-A = np.array(A)
+# print(A)
 
-print(A)
-
-# A*A
-A2 = metodo_strassen(A,A)
-A3 = metodo_strassen(A2,A)
-A4 = metodo_strassen(A3,A)
-A5 = metodo_strassen(A4,A)
-A6 = metodo_strassen(A5,A)
-A7 = metodo_strassen(A6,A)
-A8 = metodo_strassen(A7,A)
-A9 = metodo_strassen(A8,A)
-A10 = metodo_strassen(A9,A)
-A11 = metodo_strassen(A10,A)
-A12 = metodo_strassen(A11,A)
-A13 = metodo_strassen(A12,A)
-A14 = metodo_strassen(A13,A)
-A15 = metodo_strassen(A14,A)
-A16 = metodo_strassen(A15,A)
-A17 = metodo_strassen(A16,A)
-A18 = metodo_strassen(A17,A)
-A19 = metodo_strassen(A18,A)
-A20 = metodo_strassen(A19,A)
-A21 = metodo_strassen(A20,A)
-A22 = metodo_strassen(A21,A)
-A23 = metodo_strassen(A22,A)
+# # A*A
+# A2 = metodo_strassen(A,A)
+# A3 = metodo_strassen(A2,A)
+# A4 = metodo_strassen(A3,A)
+# A5 = metodo_strassen(A4,A)
+# A6 = metodo_strassen(A5,A)
+# A7 = metodo_strassen(A6,A)
+# A8 = metodo_strassen(A7,A)
+# A9 = metodo_strassen(A8,A)
+# A10 = metodo_strassen(A9,A)
+# A11 = metodo_strassen(A10,A)
+# A12 = metodo_strassen(A11,A)
+# A13 = metodo_strassen(A12,A)
+# A14 = metodo_strassen(A13,A)
+# A15 = metodo_strassen(A14,A)
+# A16 = metodo_strassen(A15,A)
+# A17 = metodo_strassen(A16,A)
+# A18 = metodo_strassen(A17,A)
+# A19 = metodo_strassen(A18,A)
+# A20 = metodo_strassen(A19,A)
+# A21 = metodo_strassen(A20,A)
+# A22 = metodo_strassen(A21,A)
+# A23 = metodo_strassen(A22,A)
 # A24 = metodo_strassen(A23,A)
 # A25 = metodo_strassen(A24,A)
 # A26 = metodo_strassen(A25,A)
@@ -71,8 +71,30 @@ A23 = metodo_strassen(A22,A)
 # A31 = metodo_strassen(A30,A)
 # A32 = metodo_strassen(A31,A)
 
-# def n_potencia(A):
+def n_potencia(A,n):
+    i = 0
+    A2 = A
+    if n == 0:
+        return np.identity(len(A))
+    while i < n-1:
+        A2 = metodo_strassen(A2,A)
+        i += 1
+    return A2
 
+def pedir_numero(cond):
+    while True:
+        try:
+            numero = int(input(cond))
+            break
+        except ValueError:
+            print("No es un numero")
+    return numero
 
-#sumar los elementos de la matriz
-print(np.sum(A23))
+def main():
+    numero = pedir_numero("¿Cuántos movimientos quieres que haga caballo?: ")
+    A2 = n_potencia(A,numero-1)
+    A3 = metodo_strassen(A2, A)
+    print("El caballo tiene", np.sum(A3), "movimientos distintos con", numero, "movimientos")
+
+if __name__ == "__main__":
+    main()
