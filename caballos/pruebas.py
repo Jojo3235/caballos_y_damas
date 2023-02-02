@@ -92,14 +92,13 @@ def pedir_numero(cond):
     return numero
 
 def main():
-    # numero = pedir_numero("¿Cuántos movimientos quieres que haga caballo?: ")
-    numero = 23
+    numero = pedir_numero("¿Cuántos movimientos quieres que haga caballo?: ")
+    start = time.time()
     A2 = n_potencia(A,numero-1)
     A3 = metodo_strassen(A2, A)
     print("El caballo tiene", np.sum(A3), "movimientos distintos con", numero, "movimientos")
-
-if __name__ == "__main__":
-    start = time.time()
-    main()
     end = time.time()
     print("Tiempo de ejecución: ", end - start, "segundos")
+
+if __name__ == "__main__":
+    main()
