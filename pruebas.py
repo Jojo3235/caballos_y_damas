@@ -93,7 +93,7 @@ def pedir_numero(cond):
 
 def main():
     # numero = pedir_numero("¿Cuántos movimientos quieres que haga caballo?: ")
-    numero = 23
+    numero = 22
     A2 = n_potencia(A,numero-1)
     A3 = metodo_strassen(A2, A)
     print("El caballo tiene", np.sum(A3), "movimientos distintos con", numero, "movimientos")
