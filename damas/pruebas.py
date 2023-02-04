@@ -1,3 +1,5 @@
+import time
+
 def pedir_numero(cond):
     while True:
         try:
@@ -24,9 +26,12 @@ def posición_damas(n):
 
 def main():
     n = pedir_numero("Introduce el numero de casillas(<1000000): ")
+    start = time.time()
     try:
         if n <= 1000000:
             print(posición_damas(n))
+            end = time.time()
+            print("Tiempo de ejecución: ", end - start)
         else:
             raise OverflowError("El número excede el límite permitido")
     except OverflowError as e:
